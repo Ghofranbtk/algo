@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1646086879 source:c:\users\worrior107\desktop\c-dictionnaire\arbre.c
+	"arbre.h"
+	<stdio.h>
+
+1645652609 c:\users\worrior107\desktop\c-dictionnaire\arbre.h
+
+1645652777 source:c:\users\worrior107\desktop\c-dictionnaire\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbre.h"
+
+1645652449 source:c:\users\worrior107\desktop\c-dictionnaire\dico.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"dico.h"
+
+1644618467 c:\users\worrior107\desktop\c-dictionnaire\dico.h
+	"arbre.h"
+
+1646234023 source:c:\users\skander\documents\codeblocks workspace\projet final\c-dictionnaire\arbre.c
+	"arbre.h"
+	<stdio.h>
+
+1646162400 c:\users\skander\documents\codeblocks workspace\projet final\c-dictionnaire\arbre.h
+
+1646233986 source:c:\users\skander\documents\codeblocks workspace\projet final\c-dictionnaire\dico.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"dico.h"
+
+1646162400 c:\users\skander\documents\codeblocks workspace\projet final\c-dictionnaire\dico.h
+	"arbre.h"
+
+1646235379 source:c:\users\skander\documents\codeblocks workspace\projet final\c-dictionnaire\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbre.h"
+
