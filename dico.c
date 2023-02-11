@@ -1,9 +1,9 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
 #include "dico.h"
+
 
 
 
@@ -17,7 +17,7 @@
 void diplayDico(char *mot, TArbre pa)
 {
     int i;
-//verifier si l'arbre donné en parametre n'est pas vide
+/**verifier si l'arbre donné en parametre n'est pas vide*/
     if (pa != NULL)
     {
         if (pa->info != '\0')
@@ -25,8 +25,10 @@ void diplayDico(char *mot, TArbre pa)
             //on commance par la branche droite vers la branche gauche
             if (pa->droite != NULL)
             {
+
                 diplayDico(mot, pa->droite);
             }
+
             if (pa->gauche != NULL)
             {
                 //creation du mot lit dans le variable mot pour le afficher lorsque on atteind  '\0'
@@ -36,7 +38,9 @@ void diplayDico(char *mot, TArbre pa)
                 });
                 diplayDico(mot, pa->gauche);//on continue la lecture a gauche dans le meme mot
             }
+
             mot[strlen(mot) - 1] = '\0';
+          //  printf("%s**\n",mot);
         }
         else
         {
@@ -49,6 +53,7 @@ void diplayDico(char *mot, TArbre pa)
             printf("|\n");
             if (pa->droite != NULL)
                 diplayDico(mot, pa->droite);
+
         }
     }
 }
@@ -327,7 +332,3 @@ int nombreAleatoire(int nombreMax)
     srand(time(NULL));
     return (rand() % nombreMax);
 }
-
-
-
-

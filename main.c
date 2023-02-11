@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include"arbre.h"
+
 void DEMOINSERTION(TArbre dico, char *buffer)
 {
  dicoAfficher(dico);
-/** m5albza hna omour zina w mak ta3refni 3aad .... ****/
-    printf("\"%s\" \t->%d\n", "ghof", dicoNbOcc("ghof",dico));
-    printf("\"%s\" \t->%d\n", "mohamed", dicoNbOcc("mohamed",dico));
-    printf("\"%s\" \t->%d\n", "mediouni", dicoNbOcc("mediouni",dico));
-    printf("\"%s\" \t->%d\n", "angular", dicoNbOcc("angular",dico));
-    printf("\"%s\" \t->%d\n", "med", dicoNbOcc("med",dico));
-    printf("\"%s\" \t->%d\n", "aaaaa", dicoNbOcc("aaaaa",dico));
-    printf("\"%s\" \t->%d\n", "djerba", dicoNbOcc("djerba",dico));
+
+    printf("\"%s\" \t -> %d\n", "gallon", dicoNbOcc("gallon",dico));
+    printf("\"%s\" \t\t -> %d\n", "mumu", dicoNbOcc("mumu",dico));
+    printf("\"%s\" \t -> %d\n", "munier", dicoNbOcc("munier",dico));
+    printf("\"%s\" \t -> %d\n", "gastro", dicoNbOcc("gastro",dico));
+    printf("\"%s\" \t -> %d\n", "lespine", dicoNbOcc("lespine",dico));
+    printf("\"%s\" \t\t -> %d\n", "ghof", dicoNbOcc("ghof",dico));
     printf("\n");
+
 };
 
 void trouverDansDICO(TArbre dico, char *buffer)
@@ -37,58 +38,67 @@ int main()
     int choice = 0;
     int i ;
     TArbre dico;
-    char buffer[255];
+    char buffer[300],chaine[350],welcome[5000];
     dico = arbreConsVide();
     char mot[50];
 
-     strcpy(buffer, "ghofran");
+    strcpy(buffer, "gallon");
     dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "mohamed");
+    strcpy(buffer, "munier");
     dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "mediouni");
+    strcpy(buffer, "abenia");
     dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "angular");
+    strcpy(buffer, "munier");
     dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "med");
+    strcpy(buffer, "mumu");
     dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "djerba");
-    dicoInsererMot(buffer, dico);
+    strcpy(buffer, "alpha");
+    dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "aaaaa");
-    dicoInsererMot(buffer, dico);
+    strcpy(buffer, "alphabeta");
+    dicoInsererMot(buffer, &dico);
 
-    strcpy(buffer, "ghof");
-    dicoInsererMot(buffer, dico);
+    strcpy(buffer, "al");
+    dicoInsererMot(buffer, &dico);
 
-    /****************************/
-
-
+strcpy(welcome,"#   ______    _                      _              __\n#  |_   _ `. (_)                    / |_           [  |\n#    | | `. \\__  .---.  .--.  _____`| |-.---. .---. | |--.\n#    | |  | [  |/ /'`\\/ .'`\\ |______| |/ /__\\/ /'`\\]| .-. |\n#   _| |_.' /| || \\__.| \\__. |      | || \\__.| \\__. | | | |\n#  |______.'[___'.___.''.__.'       \\__/'.__.'.___.[___]|__] \n#\t\t\t\t\t\t\t\t BY : Ghofran , Rawaa and Nermine\n");
 
 
+
+printf("%s",welcome);
 
     while (choice<=5){
 
-        printf("\n\t");
-        printf("\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\n");
-        printf("\t\t\t\xB2 MY DICO MENU \xB2");
-        printf("\n\t");
-        printf("\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\n\n");
-        printf("\t\xDB\xDB\xDB\xDB\xB2 PRESS 1. Statistique Dictionnaire\n");
-        printf("\n\t\xDB\xDB\xDB\xDB\xB2 PRESS 2. Inserer un mot\n");
-        printf("\n\t\xDB\xDB\xDB\xDB\xB2 PRESS 3. Afficher Contenu Dictionnaire\n");
-        printf("\n\t\xDB\xDB\xDB\xDB\xB2 PRESS 4. Rechercher un mot\n");
-        printf("\n\t\xDB\xDB\xDB\xDB\xB2 PRESS 5. Quitter\n\n");
-        printf("\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\n");
+printf(",---------------------------------------------------.\n");
+printf("| ,-----------------------------------------------.  |\n");
+printf("| |                                                | |\n");
+printf("| |                                                | |\n");
+printf("| |  \xB2 PRESS 1. Statistics                         | |\n");
+printf("| |                                                | |\n");
+printf("| |  \xB2 PRESS 2. Insert Word                        | |\n");
+printf("| |                                                | |\n");
+printf("| |  \xB2 PRESS 3. Display Dictionary Content         | |\n");
+printf("| |                                                | |\n");
+printf("| |  \xB2 PRESS 4. Search                             | |\n");
+printf("| |                                                | |\n");
+printf("| |  \xB2 PRESS 5. Quit                               | |\n");
+printf("| |                                                | |\n");
+printf("| |                                                | |\n");
+printf("| |................................................| |\n");
+printf("| |  _  :                             '      :  _  | |\n");
+printf("| | |_| :                                    : |_| | |\n");
+printf("| |  _  :_            DICO-TECH             _:  _  | |\n");
+printf("| | |_| :.)           ----------      .    (.: |_| | |\n");
+printf("| '-----.....____________________________.....-----' |\n");
+printf("----------------------------------------------------.");
 
+   printf("\nEnter your choice: ");
 
-        printf("\t--------------------------------------\n");
-        printf("\nEnter your choice: ");
-        /** verification 3al input number of choice yal ghof***/
         while (scanf("%d", &choice) == 0 || choice > 6)
         {
             printf("Invalid input. Try again\n");
@@ -97,18 +107,19 @@ int main()
         };
 
 
+
         switch (choice)
         {
 
         case 1:
-            printf("nombre des mots :%d\n",dicoNbMotsDifferents(dico));
-            printf("nombre des mots total :%d\n",dicoNbMotsTotal(dico));
+            printf("number of words without redundancy :%d\n",dicoNbMotsDifferents(dico));
+            printf("Total word count :%d\n",dicoNbMotsTotal(dico));
             break;
 
 
         case 2:
 
-            printf("Enter un mot: ");
+            printf("Enter a word: ");
             scanf("%s", mot);
             strcpy(buffer, mot);
             dicoInsererMot(buffer, &dico);
@@ -120,9 +131,9 @@ int main()
             DEMOINSERTION(dico, buffer );
             break;
 
-/*** Ghof ken fama error honi mais cv tawa *****/
+
         case 4:
-            printf("Enter un mot a rechercher: ");
+            printf("Enter a word searched : ");
             scanf("%s", mot);
             strcpy(buffer, mot);
             trouverDansDICO(dico, buffer );
@@ -132,8 +143,10 @@ int main()
         case 5:
             exit(0);
         }
+
+
     }
-    /****************************/
+
 
 
     return 0;

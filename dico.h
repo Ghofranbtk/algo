@@ -10,7 +10,7 @@ int dicoNbOcc(char *mot, TArbre a);
 int dicoNbMotsDifferents(TArbre a);
 int dicoNbMotsTotal(TArbre a);
 
-
+/**--------------------*/
 int piocherMot(char *motPioche);
 int nombreAleatoire(int nombreMax);
 
