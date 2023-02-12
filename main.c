@@ -5,7 +5,7 @@
 void DEMOINSERTION(TArbre dico, char *buffer)
 {
  dicoAfficher(dico);
-/*
+
     printf("\"%s\" \t -> %d\n", "gallon", dicoNbOcc("gallon",dico));
     printf("\"%s\" \t\t -> %d\n", "mumu", dicoNbOcc("mumu",dico));
     printf("\"%s\" \t -> %d\n", "munier", dicoNbOcc("munier",dico));
@@ -13,7 +13,7 @@ void DEMOINSERTION(TArbre dico, char *buffer)
     printf("\"%s\" \t -> %d\n", "lespine", dicoNbOcc("lespine",dico));
     printf("\"%s\" \t\t -> %d\n", "ghof", dicoNbOcc("ghof",dico));
     printf("\n");
-*/
+
 };
 
 void trouverDansDICO(TArbre dico, char *buffer)

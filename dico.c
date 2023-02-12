@@ -4,16 +4,19 @@
 #include <string.h>
 #include "dico.h"
 
-
-
-
-
 /*********** useful functions ***********/
 
 /**Fonction pour afficher le dictionnaire dans un tableau
  * @param mot  pointeur sur le mot a afficher
  * @param pa pointeur sur arbre qui contient le mot
 **/
+
+//***------------------
+
+
+
+
+
 void diplayDico(char *mot, TArbre pa)
 {
     int i;
@@ -22,7 +25,7 @@ void diplayDico(char *mot, TArbre pa)
     {
         if (pa->info != '\0')
         {
-            //on commance par la branche droite vers la branche gauche
+           /**on commance par la branche droite vers la branche gauche */
             if (pa->droite != NULL)
             {
 
@@ -32,13 +35,13 @@ void diplayDico(char *mot, TArbre pa)
 
             if (pa->gauche != NULL)
             {
-                //creation du mot lit dans le variable mot pour le afficher lorsque on atteind  '\0'
+               /**creation du mot lit dans le variable mot pour le afficher lorsque on atteind  '\0' */
                 strcat(mot, (char[2])
                 {
                     pa->info, '\0'
                 });
                 // printf("%s--\n",mot);
-                diplayDico(mot, pa->gauche);//on continue la lecture a gauche dans le meme mot
+                diplayDico(mot, pa->gauche); /**on continue la lecture a gauche dans le meme mot */
             }
 
             mot[strlen(mot) - 1] = '\0';
@@ -47,7 +50,7 @@ void diplayDico(char *mot, TArbre pa)
         else
         {
             printf("\t|          %i         |        %s", pa->nb,mot);
-            //boucle utiliser our ameliorer l'affichage du dictionnaire
+            /** boucle utiliser our ameliorer l'affichage du dictionnaire */
             for(i=0; i<50-8-strlen(mot); i++)
             {
                 printf(" ");
@@ -59,6 +62,47 @@ void diplayDico(char *mot, TArbre pa)
         }
     }
 }
+
+void dicoInsererMot(char mot[], TArbre *pa)
+{
+    if (*pa == NULL)
+    {
+        *pa = arbreCons(mot[0], mot[0] == '\0' ? 1 : 0, arbreConsVide(), arbreConsVide());
+        if (mot[0] != '\0')
+        {
+            dicoInsererMot(mot + 1, &(*pa)->gauche);
+        }
+    }
+    else
+    {
+        if (mot[0] == arbreRacineLettre(*pa))
+        {
+            if (mot[0] == '\0')
+            {
+                (*pa)->nb = (*pa)->nb + 1;
+            }
+            else
+            {
+                dicoInsererMot(mot + 1, &(*pa)->gauche);
+            }
+        }
+        else if ((int)arbreRacineLettre(*pa) < (int)mot[0])
+        {
+            dicoInsererMot(mot, &(*pa)->droite);
+        }
+        else
+        {
+            TArbre new_node = arbreCons(mot[0], mot[0] == '\0' ? 1 : 0, NULL, *pa);
+            if (mot[0] != '\0')
+            {
+                dicoInsererMot(mot + 1, &new_node->gauche);
+            }
+            *pa = new_node;
+        }
+    }
+}
+
+
 
 /**
 * fonction d'insertion apres verification
@@ -191,6 +235,7 @@ TArbre* findWord(char * mot, int i, TArbre pa)
 * @param mot pointeur sur le mot
 * @param pa pointeur sur arbre
 **/
+/**
 void dicoInsererMot(char * mot, TArbre  *pa)
 {
 
@@ -202,12 +247,14 @@ void dicoInsererMot(char * mot, TArbre  *pa)
     }
     else
     {
+
+
         pushDico(mot, 0, pa);
     }
 
 
 }
-
+*/
 /**
 * Fonction pour afficher l'entete du tableau  et executer la fonction d'affichage diplayDico();
 * @param pa arbre
@@ -219,7 +266,7 @@ void dicoAfficher(TArbre pa)
     printf("\t-------------------------------------------------------------------------\n");
     printf("\t| Nombre d occurence |                     Mot                          |\n");
     printf("\t-------------------------------------------------------------------------\n");
-    diplayDico(&tempChar,pa);
+     diplayDico(&tempChar,pa);
     printf("\t-------------------------------------------------------------------------\n");
      printf("\n");
 }
@@ -289,7 +336,7 @@ int dicoNbMotsTotal(TArbre a)
 
 
 /************* implemented functions " piocherMot " ***********/
-
+/** kelma mel file w tinsiriha mara o5ra */
 
 int piocherMot(char *motPioche)
 {
