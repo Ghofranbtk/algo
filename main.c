@@ -2,23 +2,10 @@
 #include <stdlib.h>
 #include"arbre.h"
 
-void DEMOINSERTION(TArbre dico, char *buffer)
-{
- dicoAfficher(dico);
-
-    printf("\"%s\" \t -> %d\n", "gallon", dicoNbOcc("gallon",dico));
-    printf("\"%s\" \t\t -> %d\n", "mumu", dicoNbOcc("mumu",dico));
-    printf("\"%s\" \t -> %d\n", "munier", dicoNbOcc("munier",dico));
-    printf("\"%s\" \t -> %d\n", "gastro", dicoNbOcc("gastro",dico));
-    printf("\"%s\" \t -> %d\n", "lespine", dicoNbOcc("lespine",dico));
-    printf("\"%s\" \t\t -> %d\n", "ghof", dicoNbOcc("ghof",dico));
-    printf("\n");
-
-};
 
 void trouverDansDICO(TArbre dico, char *buffer)
 {
-
+/** on teste si le nbr d'occurance de mot == 0 alors mot n'existe pas sinon deja existe    */
     if(dicoNbOcc(buffer, dico) != 0)
     {
         printf("Le mot existe dans le dictionnire\n");
@@ -69,12 +56,12 @@ int main()
 strcpy(welcome,"#   ______    _                      _              __\n#  |_   _ `. (_)                    / |_           [  |\n#    | | `. \\__  .---.  .--.  _____`| |-.---. .---. | |--.\n#    | |  | [  |/ /'`\\/ .'`\\ |______| |/ /__\\/ /'`\\]| .-. |\n#   _| |_.' /| || \\__.| \\__. |      | || \\__.| \\__. | | | |\n#  |______.'[___'.___.''.__.'       \\__/'.__.'.___.[___]|__] \n#\t\t\t\t\t\t\t\t BY : Ghofran , Raoua and Nermine\n");
 
 
-
+/** afficher le nom du programme */
 printf("%s",welcome);
 printf("\n");
 printf("\n");
     while (choice<=5){
-
+/** a chaque fois lire un choix si le nbr de choix n'est pas comptaible un msg d'erreure afficher  */
 printf("\t,---------------------------------------------------.\n");
 printf("\t| ,-----------------------------------------------.  |\n");
 printf("\t| |                                                | |\n");
@@ -113,12 +100,12 @@ printf("\t----------------------------------------------------.");
 
         switch (choice)
         {
-
+    /** voire les statistiques du dictionnaire */
         case 1:
             printf("number of words without redundancy :%d\n",dicoNbMotsDifferents(dico));
             printf("Total word count :%d\n",dicoNbMotsTotal(dico));
             break;
-
+/** ajouter un mot au dicctionnaire */
         case 2:
 
             printf("Enter a word: ");
@@ -128,19 +115,19 @@ printf("\t----------------------------------------------------.");
 
             break;
 
-
+/** afiicher le dicctionnaire */
         case 3:
-            DEMOINSERTION(dico, buffer );
+           dicoAfficher(dico);
             break;
 
-
+/** chercher un mot dans le dicctionnaire */
         case 4:
             printf("Enter a word searched : ");
             scanf("%s", mot);
             strcpy(buffer, mot);
             trouverDansDICO(dico, buffer );
               break;
-
+/** quiter le programme */
         case 5:
             exit(0);
         }
