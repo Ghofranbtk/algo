@@ -1,4 +1,3 @@
-#ifndef ARBRE_H_
 #define ARBRE_H_
 
 typedef struct Noeud {
